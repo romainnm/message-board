@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class="container")
+    h3 Share a positive thought!
+    div(class="form-container")
+        form(method="POST" action="/new")
+            div(class="input-container")
+                label(for="user")  Name
+                input(type='text', name='user', required)
+            div(class="input-container") 
+                label(for="quote") Your quote    
+                textarea(name="quote", required)
+            div(class="btn-container") 
+                input(type='submit', value='Add Quote' )
+                a(href="/", class="btn-back") Go Back 

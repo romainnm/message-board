@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="header-container") 
+      h1= title
+      hr
+      h3 Welcome & Thank you for sharing your happy quotes!
+      a(class="btn-add-quote" href="/new") Add new quote
+    div(class="quote-container")
+      each message in messages
+        div(class="quote")
+          q= message.text
+          p(class="user")= "by " + message.user
+          p(class="date")= message.added
